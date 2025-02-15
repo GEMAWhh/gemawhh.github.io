@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>智能交通与智能汽车答题游戏</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 背景音乐 -->
+    <audio id="bgMusic" loop>
+        <source src="background_music.mp3" type="audio/mpeg">
+        您的浏览器不支持音频播放。
+    </audio>
+
+    <div id="main">
+        <img src="background.jpg" alt="智慧交通背景图" id="background">
+        <button id="roadBtn">智慧的路</button>
+        <button id="carBtn">聪明的车</button>
+        <button id="safetyBtn">安全出行</button>
+    </div>
+
+    <div id="quiz" style="display: none;">
+        <h2 id="question"></h2>
+        <div id="options"></div>
+        <button id="nextBtn">下一题</button>
+    </div>
+
+    <div id="leaderboard" style="display: none;">
+        <h2>积分排行榜</h2>
+        <ul id="scoresList"></ul>
+        <button id="backBtn">返回主界面</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

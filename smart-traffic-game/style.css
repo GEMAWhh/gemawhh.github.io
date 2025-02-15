@@ -1,0 +1,118 @@
+/* 引入本地字体 */
+@font-face {
+    font-family: 'Orbitron';
+    src: url('Orbitron-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Orbitron';
+    src: url('Orbitron-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* 全局样式 */
+body {
+    font-family: 'Orbitron', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: #fff;
+    overflow: hidden;
+}
+
+/* 主界面 */
+#main {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url('background.jpg') no-repeat center center/cover;
+    animation: moveBackground 20s linear infinite;
+}
+
+@keyframes moveBackground {
+    0% { background-position: 0 0; }
+    100% { background-position: 100% 100%; }
+}
+
+/* 按钮样式 */
+button {
+    margin: 15px;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-family: 'Orbitron', sans-serif;
+    color: #fff;
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #00c6ff;
+}
+
+/* 答题界面 */
+#quiz {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 198, 255, 0.5);
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+#question {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#options button {
+    margin: 10px;
+    width: 80%;
+    background: linear-gradient(135deg, #0072ff, #00c6ff);
+}
+
+#options button:hover {
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+}
+
+/* 排行榜界面 */
+#leaderboard {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 198, 255, 0.5);
+    animation: fadeIn 0.5s ease;
+}
+
+#scoresList {
+    list-style: none;
+    padding: 0;
+}
+
+#scoresList li {
+    margin: 10px 0;
+    font-size: 18px;
+}
